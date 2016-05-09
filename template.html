@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class='nav'>
+      <li><a href='index.html'>Index page</a></li>
+      <li><a href='basic.html'>Basic page</a></li>
+    <div>
+    <div>
+      <h2><%- htmlWebpackPlugin.options.title %></h2>
+      <h2><%- htmlWebpackPlugin.files.chunks.index %></h2>
+      <h2><%- htmlWebpackPlugin.files.chunks.basic %></h2>
+      <h2><%- Object.keys(webpack.chunks[0])%></h2>
+      <h2><%- webpack.chunks[0].names%></h2>
+      <h2><%- Object.keys(webpackConfig.entry) %></h2>
+      <h2><%- htmlWebpackPlugin.files.chunks.index && htmlWebpackPlugin.files.chunks.index.entry %></h2>
+      <img src="./image/what-is-webpack.png"/>
+    <div>
+  </body>
+</html>
